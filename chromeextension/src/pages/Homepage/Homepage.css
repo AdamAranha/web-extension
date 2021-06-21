@@ -1,0 +1,11 @@
+body{
+    background-color: #2F5D62;
+}
+
+.homepage-wrapper{
+    height: 75vh;
+    width: 75vw;
+    background-color:#E1F5EF ;
+    border-radius: 1rem;
+    opacity: 90%;
+}

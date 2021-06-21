@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome-extension",
+  "author": "Adam",
+  "version": "1.0.1",
+  "description": "Replaces new tab with a customized panel",
+  "icons": {
+    "16": "android-chrome-16.ico",
+    "48": "android-chrome-48.ico",
+    "128": "android-chrome-128.ico"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}

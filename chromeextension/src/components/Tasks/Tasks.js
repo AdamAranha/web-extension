@@ -4,7 +4,7 @@ import './Tasks.css';
 function Tasks(props) {
 
     return (
-        <div className={`${props.addedClasses} tasks-container column-5wide`}>
+        <div className={`${props.addedClasses} tasks-container`}>
 
         </div>
     )

@@ -34,7 +34,7 @@ function Profile(props) {
     }
 
     return (
-        <div className={`${props.addedClasses} profile-container column-2wide`}>
+        <div className={`${props.addedClasses} profile-container`}>
             <p className='profile-text'>{`${greeting},\nAdam`}</p>
         </div>
     )

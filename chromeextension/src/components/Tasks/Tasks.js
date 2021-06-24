@@ -1,10 +1,10 @@
 import React from 'react';
 import './Tasks.css';
 
-function Tasks() {
+function Tasks(props) {
 
     return (
-        <div className='tasks-container column-5wide'>
+        <div className={`${props.addedClasses} tasks-container column-5wide`}>
 
         </div>
     )

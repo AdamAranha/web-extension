@@ -11,9 +11,9 @@ function Homepage() {
 
 
             <div className='homepage-container'>
-                <Profile />
-                <Weather />
-                <Tasks />
+                <Profile addedClasses='shmancyCard' />
+                <Weather addedClasses='shmancyCard' />
+                <Tasks addedClasses='shmancyCard' />
             </div>
         </div>
     )

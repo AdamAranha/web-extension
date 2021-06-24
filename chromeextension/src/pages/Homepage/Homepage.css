@@ -32,3 +32,12 @@ body{
 .column-5wide{
     grid-column:span 5/auto;
 }
+
+.shmancyCard{
+    box-shadow: 1px 1px 10px  #1b1d24;
+}
+
+.shmancyCard:hover {
+    filter: brightness(107.5%) ;
+    box-shadow: 5px 10px 18px #1b1d24;
+}

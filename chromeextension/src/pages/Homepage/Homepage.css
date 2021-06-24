@@ -1,11 +1,34 @@
 body{
-    background-color: #2F5D62;
+    background-color: #12131A;
 }
 
 .homepage-wrapper{
-    height: 75vh;
-    width: 75vw;
-    background-color:#E1F5EF ;
-    border-radius: 1rem;
-    opacity: 90%;
+    display: flex;
+
+    align-items: center;
+}
+
+.homepage-container{
+    background-color:#24262F;
+
+    width: 80vw;
+    border-radius: 20px;
+    padding: 5vw;
+    display:grid;
+    gap: 3rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows: 25vh;
+    /* grid-template-rows: repeat(auto-fit, minmax(30vw,1fr)); */
+}
+
+.column-2wide{
+    grid-column:span 2/auto;
+}
+
+.column-3wide{
+    grid-column:span 3/auto;
+}
+
+.column-5wide{
+    grid-column:span 5/auto;
 }

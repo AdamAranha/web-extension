@@ -1,0 +1,9 @@
+.tasks-container{
+    min-width: 10vw;
+    min-height: 10vh;
+    /* max-width: 20vw;
+    max-height: 20vh; */
+    background-color: #2B2F3A;
+
+    border-radius: 20px;
+}

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
+
+.section1-container{
+    height: 40vh;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    color: #828699;
+    font-family: 'Montserrat', sans-serif;
+    font-size:17vh;
+}

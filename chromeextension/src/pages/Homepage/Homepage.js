@@ -1,19 +1,19 @@
 import React from 'react';
-import './Homepage.css'
-import Profile from '../../components/Profile/Profile'
-import Weather from '../../components/Weather/Weather'
-import Tasks from '../../components/Tasks/Tasks'
+import './Homepage.css';
+import Section1 from '../Section1/Section1';
+import Section2 from '../Section2/Section2';
+import Section3 from '../Section3/Section3';
+
+
 
 function Homepage() {
 
     return (
         <div className='homepage-wrapper'>
-
-
             <div className='homepage-container'>
-                <Profile addedClasses='shmancyCard column-2wide' />
-                <Weather addedClasses='shmancyCard column-3wide' />
-                <Tasks addedClasses='shmancyCard column-5wide' />
+                <Section1 />
+                <Section2 />
+                <Section3 />
             </div>
         </div>
     )

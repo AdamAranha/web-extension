@@ -1,24 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import './Weather.css';
-import Clock from '../Clock/Clock'
-
-function Weather(props) {
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
-    const newClock = Clock(new Date());
+function Weather() {
 
-    return (
-        <div className={`${props.addedClasses} weather-container`}>
-            <div className='flexOne clock'>
-                <p className='weather-text'>{newClock.toLocaleTimeString()}</p>
-            </div>
+    const [weather, setWeather] = useState(null);
+    const [description, setDescription] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
 
-            <div className='flexOne'>
-                <p className='weather-text'>Hello There</p>
-            </div>
-        </div>
+    useEffect(() => {
+        let isMounted = true;
 
-    )
+        setLoading(true);
+
+        // axios({
+        //     method: 'GET',
+        //     url: 'https://api.openweathermap.org/data/2.5/weather?q=toronto&units=metric&appid=aa90ac058b495c053fe298a69ac239e2',
+
+        // })
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=toronto&units=metric&appid=aa90ac058b495c053fe298a69ac239e2'
+
+        )
+            .then((res) => res.json())
+            .then((res) => {
+                setWeather(res.main.temp)
+                setDescription(res.weather[0].description)
+                console.log('weather out')
+            })
+
+        return () => (isMounted = false);
+
+    }, [])
+
+
+    return { weather, description }
 }
 
 export default Weather

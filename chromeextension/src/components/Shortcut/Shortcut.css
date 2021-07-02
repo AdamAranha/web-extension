@@ -45,7 +45,7 @@ background-color: #1d202b;
     transition-delay: 0s ;
 }
 
-.circle{
+.shortcut-circle{
     height: 5vw;
     width:5vw;
     /* background-color: #828699; */
@@ -56,7 +56,7 @@ background-color: #1d202b;
     align-items: center;
     color: #828699;
     font-family: 'Montserrat', sans-serif;
-    font-size:5vh;
+    font-size:2vw;
 }
 
 .shortcut-option-circle{

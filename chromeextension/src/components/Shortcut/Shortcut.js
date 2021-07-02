@@ -26,7 +26,7 @@ function Shortcut() {
                 <div className='shortcut-option-circle'></div>
 
             </div>
-            <div className='circle'>
+            <div className='shortcut-circle'>
                 <p>N</p>
             </div>
         </div>

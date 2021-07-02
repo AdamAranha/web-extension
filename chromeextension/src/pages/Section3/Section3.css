@@ -1,4 +1,31 @@
-.section3-container{
-    height: 40vh;
+
+.section3-wrapper{
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    
 }
+
+.section3-container{
+
+    display: grid;
+    padding: 1vw;
+
+    grid-template-columns: repeat(5,1fr);
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+
+
+
+.section3-shortcut{
+    /* background-color: #12131A; */
+    /* height: 15vw;
+    width: 15vw; */
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+

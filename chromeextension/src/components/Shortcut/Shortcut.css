@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.shortcut-wrapper{
+    height: 10vw;
+    width: 10vw;
+    transition: 100ms ease-in-out background-color;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shortcut-wrapper:hover{
+    filter: brightness(105%);
+    background-color: #161820;
+    border-radius:10px;
+}
+
+.shortcut-container{
+    position: relative;
+}
+
+.shortcut-option-div{
+    position:absolute;
+    top: .25vw;
+    right: .25vw;
+    border-radius: 50%;
+    height: 2vw;
+    width: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 150ms ease-in background-color;
+    transition: 100ms ease-in opacity 300ms;
+    opacity: 0;
+}
+
+.shortcut-option-div:hover{
+filter:brightness(130%);
+background-color: #1d202b;
+}
+
+.shortcut-option-div:active{
+    transition-delay: 0s ;
+}
+
+.circle{
+    height: 5vw;
+    width:5vw;
+    /* background-color: #828699; */
+    border-radius: 50%;
+    border: 5px solid #828699;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #828699;
+    font-family: 'Montserrat', sans-serif;
+    font-size:5vh;
+}
+
+.shortcut-option-circle{
+    height:5px;
+    width:5px;
+    background-color: #a8acc5;
+    border-radius: 50%;
+    margin:2px;
+
+}

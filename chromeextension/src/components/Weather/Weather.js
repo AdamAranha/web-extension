@@ -1,24 +1,17 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 
 
 function Weather() {
 
     const [weather, setWeather] = useState(null);
     const [description, setDescription] = useState(null);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
+    // const [error, setError] = useState(null);
+    // const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        let isMounted = true;
+        // let isMounted = true;
 
-        setLoading(true);
-
-        // axios({
-        //     method: 'GET',
-        //     url: 'https://api.openweathermap.org/data/2.5/weather?q=toronto&units=metric&appid=aa90ac058b495c053fe298a69ac239e2',
-
-        // })
+        // setLoading(true);
         fetch('https://api.openweathermap.org/data/2.5/weather?q=toronto&units=metric&appid=aa90ac058b495c053fe298a69ac239e2'
 
         )
@@ -29,7 +22,7 @@ function Weather() {
                 console.log('weather out')
             })
 
-        return () => (isMounted = false);
+        // return () => (isMounted = false);
 
     }, [])
 

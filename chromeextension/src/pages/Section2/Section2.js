@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Section2.css';
 import DateObj from '../../components/DateObj/Dateobj.js';
 import Weather from '../../components/Weather/Weather.js'
@@ -8,7 +8,7 @@ import { ReactComponent as YourSvg } from './Framefewclouds.svg'
 function Section2() {
 
     const { dayOfWeek, month, date } = DateObj()
-    const { loading, error, weather, description } = Weather();
+    const { weather, description } = Weather();
 
 
 

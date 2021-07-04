@@ -1,39 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Section3.css';
 import Shortcut from '../../components/Shortcut/Shortcut.js'
+import EditModal from '../../components/EditModal/EditModal';
 
 function Section3() {
 
-    const [display, setDisplay] = useState('flex')
-    const [dummyDisplay, setDummyDisplay] = useState('flex')
-    const [color, setColor] = useState('#12131A')
+    const [modalEditShow, setModalEditShow] = useState(false)
+    const [modalOpacity, setModalOpacity] = useState('100%')
 
-    function showElement() {
-        setDisplay('flex')
-    }
+    useEffect(() => {
+
+    }, [])
 
     return (
         <div className='section3-wrapper'>
             <div className='section3-container'>
-                <Shortcut />
-                <Shortcut />
-                <Shortcut />
-                <Shortcut />
-                <Shortcut />
-                <Shortcut />
-                <Shortcut />
+                <Shortcut setModalEditShow={setModalEditShow} modalOpacity={modalOpacity} setModalOpacity={setModalOpacity} />
+                <Shortcut setModalEditShow={setModalEditShow} modalOpacity={modalOpacity} setModalOpacity={setModalOpacity} />
+                <Shortcut setModalEditShow={setModalEditShow} modalOpacity={modalOpacity} setModalOpacity={setModalOpacity} />
+                <Shortcut setModalEditShow={setModalEditShow} modalOpacity={modalOpacity} setModalOpacity={setModalOpacity} />
+                <Shortcut setModalEditShow={setModalEditShow} modalOpacity={modalOpacity} setModalOpacity={setModalOpacity} />
+                <Shortcut setModalEditShow={setModalEditShow} modalOpacity={modalOpacity} setModalOpacity={setModalOpacity} />
+
+
+                <EditModal modalEditShow={modalEditShow} setModalEditShow={setModalEditShow} />
             </div>
-
-            {/* <div
-                style={{
-                    height: '100px',
-                    width: '100px',
-                    backgroundColor: 'blue'
-                }}>
-            </div> */}
-
-
-
         </div>
 
     )

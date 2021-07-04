@@ -1,0 +1,23 @@
+.editModal-container{
+    height: 20vw;
+    width: 30vw;
+    position: absolute;
+    top: 25vh;
+    left: 35vw;
+    background-color: #161820;
+    border-radius: 5px;
+    border: 1px solid #5d6069;
+    padding: 2vw;
+}
+
+.editModal-form{
+    color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .editModal-buttonGroup{
+    position: abosolute;
+    bottom: 0px;
+    right: 0px;
+} */

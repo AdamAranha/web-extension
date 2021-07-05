@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './EditModal.css'
+import './EditModal.css';
+import { v4 as uuidv4 } from 'uuid';
 
-export default function EditModal({ modalEditShow, setModalEditShow, className }) {
+export default function EditModal({ modalEditShow, setModalEditShow, className, shortList, setShortList }) {
 
     const [shortcutData, setShortcutData] = useState({
         name: '',
-        URL: ''
+        URL: '',
+        id: ''
     })
+
 
     let modalEditRef = useRef();
 
@@ -27,6 +30,7 @@ export default function EditModal({ modalEditShow, setModalEditShow, className }
         setShortcutData(prevInput => {
             return {
                 ...prevInput,
+                id: uuidv4(),
                 [name]: value
             }
         })
@@ -34,7 +38,18 @@ export default function EditModal({ modalEditShow, setModalEditShow, className }
     }
 
     function handleClick(event) {
-        console.log(event.target.name)
+        if (event.target.name === 'confirm') {
+            const tempList = [...shortList]
+
+            tempList.push(shortcutData)
+            localStorage.setItem('shortcutList', JSON.stringify(tempList))
+            setShortList(tempList)
+            console.log(JSON.parse(localStorage.shortcutList))
+            // setShortList(shortList.push(shortcutData))
+            // setShortcutData('')
+        }
+
+
         setModalEditShow(false)
     }
 

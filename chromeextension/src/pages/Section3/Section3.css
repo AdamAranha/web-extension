@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.section3-addShortcut{
+.section3-shortcut-container{
     height: 10vw;
     width: 10vw;
     transition: 100ms ease-in-out background-color;
@@ -27,7 +27,7 @@
     cursor: pointer;
 }
 
-.section3-addShortcut:hover{
+.section3-shortcut-container:hover{
     filter: brightness(105%);
     background-color: #161820;
     border-radius:10px;

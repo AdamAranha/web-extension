@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Shortcut.css';
 import Modal from '../../components/Modal/Modal.js'
 
-function Shortcut({ setModalEditShow, modalOpacity }) {
+function Shortcut({ setModalEditShow, modalOpacity, listItem }) {
 
 
     const [optionsOpacity, setOptionsOpacity] = useState('0%')
@@ -21,7 +21,7 @@ function Shortcut({ setModalEditShow, modalOpacity }) {
         }} onMouseLeave={() => {
             setOptionsOpacity('0%');
             setDelay('0s');
-        }}>
+        }} key={listItem.id}>
 
             <div className='shortcut-option-div' onMouseLeave={() => {
                 setDelay('0s');
@@ -36,7 +36,7 @@ function Shortcut({ setModalEditShow, modalOpacity }) {
             <Modal showModal={showModal} setShowModal={setShowModal} setModalEditShow={setModalEditShow} />
 
             <div className='shortcut-circle'>
-                <p>N</p>
+                <p>{listItem.name}</p>
             </div>
         </div>
     )

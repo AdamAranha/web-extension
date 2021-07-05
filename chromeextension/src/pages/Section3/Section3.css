@@ -15,3 +15,36 @@
     /* justify-content: center; */
     align-items: center;
 }
+
+.section3-addShortcut{
+    height: 10vw;
+    width: 10vw;
+    transition: 100ms ease-in-out background-color;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.section3-addShortcut:hover{
+    filter: brightness(105%);
+    background-color: #161820;
+    border-radius:10px;
+}
+
+.section3-circle{
+   
+        height: 5vw;
+        width:5vw;
+        /* background-color: #828699; */
+        border-radius: 50%;
+        border: 5px solid #828699;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #828699;
+        font-family: 'Montserrat', sans-serif;
+        font-size:2vw;
+    
+}

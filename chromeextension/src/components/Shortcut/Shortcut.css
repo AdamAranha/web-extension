@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
+.shortcut-container{
+    height: 10vw;
+    width: 10vw;
+    transition: 100ms ease-in-out background-color;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.shortcut-container:hover{
+    filter: brightness(105%);
+    background-color: #161820;
+    border-radius:10px;
+}
+
 .shortcut-wrapper{
     height: 10vw;
     width: 10vw;
@@ -15,10 +32,6 @@
     filter: brightness(105%);
     background-color: #161820;
     border-radius:10px;
-}
-
-.shortcut-container{
-    position: relative;
 }
 
 .shortcut-option-div{

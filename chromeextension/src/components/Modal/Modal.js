@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Modal.css';
+import HandleClick from '../HandleClick/HandeClick';
 
-export default function Modal({ showModal, setShowModal, setModalEditShow }) {
+export default function Modal({ showModal, setShowModal, setModalEditShow, shortList, setShortList, listItem, shortData }) {
 
-    const [temptemp, setTemptemp] = useState()
     const [modalOpacity, setModalOpacity] = useState('100%')
     let modalRef = useRef();
 
@@ -19,30 +19,34 @@ export default function Modal({ showModal, setShowModal, setModalEditShow }) {
         }
     });
 
-    function editModal() {
+    function handleClick(event) {
 
-        setTemptemp(
-            // <div className='modal-edit-container'>
-            //     Hi
-            // </div>
-            setModalEditShow('true')
+        if (event.target.name === 'edit') {
+            setModalEditShow(prev => !prev)
+            let id = listItem.id
+            let index = shortList.findIndex(item => item.id === listItem.id)
+            console.log(id)
+            console.log(shortData)
+            // shortList.splice(shortList.findIndex(item => item.id === listItem.id), 1)
+        } else {
 
-        )
-        // setModalOpacity('0')
+            shortList.splice(shortList.findIndex(item => item.id === listItem.id), 1)
+            localStorage.setItem('shortcutList', JSON.stringify(shortList))
+            setShortList(JSON.parse(localStorage.shortcutList || '[]'))
+        }
     }
 
     return <> {!showModal ?
         <div ref={modalRef} className='modal-container' style={{
             opacity: modalOpacity
         }}>
-            <div className='modal-options modal-edit'
-                onClick={() => editModal()}>
+            {/* <button className='modal-options modal-edit'
+                onClick={handleClick} name='edit'>
                 Edit
-            </div>
-            <div className='modal-options modal-remove'>
+            </button> */}
+            <button className='modal-options modal-remove' name='remove' onClick={handleClick}>
                 Remove
-            </div>
-            {temptemp}
+            </button>
         </div>
 
         : null}</>;
